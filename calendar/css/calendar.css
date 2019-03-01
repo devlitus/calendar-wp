@@ -1,0 +1,119 @@
+.calendario {
+    /*display: inline-block;*/
+    /*width: 50%;*/
+    /*max-width: 600px;*/
+    /*z-index: 9;*/
+    /*top: 35em;*/
+    /*margin-left: 6em;*/
+}
+.calendar-info {
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+.calendar-prev, .calendar-next {
+    color: #0b0b0b;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+.calendar-prev {
+    margin-right: auto;
+}
+.calendar-next {
+    margin-left: auto;
+}
+.calendar-week, .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+.calendar-month {
+    margin: .5em 1em;
+}
+.calendar-item {
+    color: white;
+    text-align: center;
+    line-height: 2;
+}
+.calendar-today {
+    background: #a6f090;
+    color: white;
+    width: 50%;
+    border-radius: 50%;
+    margin: auto;
+}
+.calendar-last-day {
+    opacity: .3;
+}
+.calendar-reserva-completa {
+    background: red;
+    color: white;
+    width: 50%;
+    border-radius: 50%;
+    margin: auto;
+}
+.calendar-reserva{
+    background: orange;
+    color: white;
+    width: 50%;
+    border-radius: 50%;
+    margin: auto;
+    transition: all .5s ease;
+}
+div.calendar-reserva:hover{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    background: orangered;
+    transform: scale(1.5, 1.5);
+}
+.calendar-reserva:hover > span{
+    position: absolute;
+    box-sizing: border-box;
+    left: 1.5em;
+    top: -.3em;
+    /*margin: 0;*/
+    font-size: .6rem;
+}
+.calendar-reserva > p{
+    display: none;
+}
+.calendar-reserva:hover > p{
+    display: block;
+    position: relative;
+    font-size: .7rem;
+    top: .5rem;
+    /*border-top: 1px solid wheat;*/
+    margin: 5px;
+}
+@media only screen and (max-width: 48em){
+    div.calendar-reserva:hover{
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+        background: orangered;
+        transform: scale(1, 1);
+    }
+    .calendar-reserva:hover > span{
+        position: absolute;
+        box-sizing: border-box;
+        left: 1.5em;
+        top: -.3em;
+        /*margin: 0;*/
+        font-size: .6rem;
+    }
+    .calendar-reserva > p{
+        display: none;
+    }
+    .calendar-reserva:hover > p{
+        display: block;
+        position: relative;
+        font-size: .7rem;
+        top: .5rem;
+        /*border-top: 1px solid wheat;*/
+        margin: 5px;
+    }
+
+}
